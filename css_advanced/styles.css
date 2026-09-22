@@ -1,0 +1,380 @@
+/* ===== Base / variables ===== */
+:root {
+  --purple: #6c4ee3;
+  --purple-dark: #4f36b3;
+  --text-dark: #2c2c3a;
+  --text-muted: #6b6b7b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* ===== Banner (header lives inside it, on the background image) ===== */
+.banner {
+  background: linear-gradient(rgba(30, 20, 70, 0.55), rgba(30, 20, 70, 0.65)),
+              url("https://via.placeholder.com/1600x900?text=Banner+Background") center/cover no-repeat;
+  padding-bottom: 60px;
+}
+
+/* ===== Header ===== */
+.site-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 24px 20px 0;
+}
+
+.header-nav {
+  display: flex;
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+/* ===== Banner content ===== */
+.banner-content {
+  max-width: 640px;
+  margin: 60px auto 0;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-content h1 {
+  color: #fff;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.banner-content p {
+  color: #fff;
+  font-size: 1.1em;
+  margin-top: 16px;
+}
+
+.banner-content button {
+  background-color: var(--purple);
+  color: #fff;
+  border-radius: 30px;
+  padding: 14px 36px;
+  margin-top: 24px;
+  box-shadow: 0 10px 25px rgba(108, 78, 227, 0.45);
+  font-size: 1em;
+}
+
+/* ===== Instructors ===== */
+.instructors {
+  max-width: 1000px;
+  margin: 60px auto 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.instructors h2 {
+  color: #fff;
+  font-size: 1.8em;
+  margin-bottom: 32px;
+}
+
+.instructors-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.instructor-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+}
+
+.instructor-item h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05em;
+}
+
+.instructor-item p {
+  color: #e4dcff;
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+/* ===== Quote ===== */
+.quote-section {
+  background-color: var(--purple);
+  padding: 60px 20px;
+}
+
+.quote-block {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.quote-block img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.quote-content blockquote {
+  color: #fff;
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+.quote-author {
+  color: #fff;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.quote-title {
+  color: #e4dcff;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* ===== Videos ===== */
+.videos-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.videos-section h1 {
+  font-size: 1.8em;
+  color: var(--purple);
+  margin-bottom: 40px;
+}
+
+.videos-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.video-item {
+  width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.video-item > img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.video-item h2 {
+  font-size: 1.05em;
+  padding: 12px 12px 0;
+}
+
+.video-item > p {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  padding: 6px 12px 0;
+}
+
+.video-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+}
+
+.video-author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.video-author h3 {
+  color: var(--purple);
+  font-size: 0.9em;
+}
+
+.video-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px 12px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.stars img {
+  width: 14px;
+  height: 14px;
+}
+
+.video-rating p {
+  color: var(--purple);
+  font-size: 0.85em;
+}
+
+/* ===== Membership ===== */
+.membership-section {
+  background-color: #f7f5ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.membership-section h1 {
+  font-size: 1.8em;
+  color: var(--purple);
+  margin-bottom: 40px;
+}
+
+.membership-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.membership-item {
+  max-width: 200px;
+}
+
+.membership-item img {
+  margin: 0 auto 16px;
+  filter: invert(32%) sepia(84%) saturate(1936%) hue-rotate(230deg);
+}
+
+.membership-item h2 {
+  font-size: 1.1em;
+}
+
+.membership-item p {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+.membership-section button {
+  background-color: var(--purple);
+  color: #fff;
+  border-radius: 30px;
+  padding: 14px 36px;
+  margin-top: 48px;
+}
+
+/* ===== FAQ ===== */
+.faq-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.faq-section h1 {
+  font-size: 1.8em;
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.faq-item {
+  flex: 1;
+}
+
+.faq-item h2 {
+  font-size: 1.05em;
+}
+
+.faq-item p {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background-color: var(--text-dark);
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-copyright {
+  color: #9b9bab;
+  font-size: 0.85em;
+  text-align: center;
+  margin-top: 24px;
+}
